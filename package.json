@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/sharif24with40/Markdown_previewer",
+  "homepage": "https://github.com/sharif24with40/Markdown_previewer.git",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
