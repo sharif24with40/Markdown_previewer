@@ -5,7 +5,7 @@ function Home() {
   return (
     <div className="layout">
       <div className="logo-container">
-        <img src="/logo.png" alt="Syntax Craft Logo" />
+        <img src="/Markdown_previewer/logo.png" alt="Syntax Craft Logo" />
         <h1>SYNTAX CRAFT</h1>
       </div>
       <div className="left-panel">
