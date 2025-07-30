@@ -1,0 +1,118 @@
+.editor-preview-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 60px 40px;
+  height: 100vh;
+  box-sizing: border-box;
+  background: linear-gradient(-45deg, #1a0e2e, #0d0d1a, #1b1449, #003333, #0f3c3a);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  color: #e0e0e0;
+}
+.editor-section h2,
+.preview-section h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #ffffffd9;
+}
+.editor-section,
+.preview-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  background: rgba(255, 255, 255, 0.06);
+  color: #e0e0e0;
+  border:none;
+  border-radius: 12px;
+  resize:none;
+  padding: 20px;
+  font-size: 16px;
+  width: 800px;
+  height: 700px;
+  flex-grow: 1;
+  box-shadow: 0 0 12px rgba(0.2, 0.3, 0.2, 0.5);
+  font-family: inherit;
+}
+
+.preview-output {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 20px;
+  flex-grow: 1;
+  width: 800px;
+  height: 700px;
+  overflow-y: auto;
+  box-shadow: 0 0 18px rgba(0.2, 0.3, 0.2, 0.5);
+  margin-bottom: 20px;
+}
+
+.copy-button {
+  margin-top: 16px;
+  padding: 10px 18px;
+  background: linear-gradient(145deg, #8b5cf6, #6d28d9);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.5);
+}
+
+.copy-button:hover {
+  background: linear-gradient(145deg, #a78bfa, #7c3aed);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.8);
+  transform: translateY(-2px);
+}
+
+.preview-output h1,
+.preview-output h2,
+.preview-output h3 {
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+.preview-output p {
+  color: #dddddd;
+  line-height: 1.6;
+}
+
+.preview-output code {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 768px) {
+  .editor-preview-container {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+
+  textarea,
+  .preview-output {
+    max-width: 90%;
+    min-height: 250px;
+  }
+
+  .preview-output {
+    max-height: 60vh;
+  }
+
+  .copy-button {
+    align-self: center;
+    margin-bottom: 20px;
+  }
+}
