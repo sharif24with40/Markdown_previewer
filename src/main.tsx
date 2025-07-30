@@ -6,7 +6,7 @@ import App from './App.js'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/Markdown_previewer">
       <App />
     </BrowserRouter>
   </StrictMode>,
